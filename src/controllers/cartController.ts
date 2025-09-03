@@ -110,10 +110,9 @@ const decrementCartItem = async (req: Request, res: Response) => {
       product.cartItem.equals(cartItemId)
     );
 
-    console.log("existing: ", existingProduct);
+    // console.log("existing: ", existingProduct);
     if (!existingProduct) {
       res.json({ message: "Product Not Found" });
-
       return;
     }
 

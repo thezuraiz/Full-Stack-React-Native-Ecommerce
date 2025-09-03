@@ -2,7 +2,7 @@ import express from "express";
 import { userRouter } from "./routes/authRouter";
 import productRouter from "./routes/ProductRouter";
 import cartRoute from "./routes/cartRouter";
-
+import orderRouter from "./routes/orderRouter";
 const app = express();
 
 // To decode and read json data
@@ -20,5 +20,6 @@ app.get("/", (req, res) => {
 app.use("/api/auth", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRouter);
 
 export default app;
