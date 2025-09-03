@@ -4,7 +4,7 @@ const OrderSchema = new mongoose.Schema(
   {
     userId: { type: String, required: true },
     customerId: { typee: String, required: true },
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: "Products" },
+    productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
     quantity: { type: Number, required: true },
     subTotal: { type: Number, required: true },
     total: { type: Number, required: true },
@@ -14,4 +14,4 @@ const OrderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Orders", OrderSchema);
+export default mongoose.model("Order", OrderSchema);
